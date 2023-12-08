@@ -1,35 +1,30 @@
-function pesoMedia() {
+let maiorPeso = 0;
+let totalPessoas = 0;
+let maiorCem = 0;
+let media;
+let peso;
+let pessoas;
+let totalPeso = 0;
+let i
+for ( i = 1; i <= 8; i++) {
+    peso = Number(prompt('Digite o seu peso'))
 
-    let npessoas;
-    let maiorpeso = 0;
-    let totalpessoas;
-    let maiorcem;
-    let media;
+    totalPeso += peso 
+    totalPessoas++
 
-    for (let i = 1 ; i <= 8; i = i++) { 
-        let peso = Number(prompt('Digite o peso da ' + i + 'º pessoa'))
-        
-        if (peso > maiorpeso){
-            maiorpeso = peso
+
+    if (peso > 100) {
+        maiorCem++
+    }
+
+    if (peso > maiorPeso) {
+        maiorPeso = peso
+    }
+
+    
+
 }
 
-        total = total + peso
+media = (totalPeso / 8 )
 
-        if(peso > 100){
-            maiorcem++
- }
-        alert("O maior peso é"+ maior peso)
-        alert("A quantidade de pessoas que pesam mais de 100 kg é" + maiorcem)
-        alert("A média dos pesos é" + media )
-
-
- }
-        
-        
-    /*    <p>Número
-        <input type="number" id="inNumero">
-    </p>
-    <p>
-        <input type="button" value="Decrescer até 1" id="btDecrescer">
-    <h3 id="outResposta"></h3>
-    </p>*/  
+alert("A media de peso é: " + media + "Total de pessoas que pesam mais que 100kg é: " + maiorCem + "Total de pessoas é: " + totalPessoas+ "O maior peso é: " + maiorPeso)
